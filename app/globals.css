@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0a0a0b;
+  --ink: #f5f5f5;
+  --ink-dim: #a1a1a6;
+  --ink-mute: #6b6b70;
+  --accent: #fe2c55;
+  --rail: rgba(255, 255, 255, 0.08);
+  --rail-strong: rgba(255, 255, 255, 0.24);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-ink: var(--ink);
+  --color-ink-dim: var(--ink-dim);
+  --color-ink-mute: var(--ink-mute);
+  --color-accent: var(--accent);
+  --color-rail: var(--rail);
+  --color-rail-strong: var(--rail-strong);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+}
+
+html,
+body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--ink);
+  color-scheme: dark;
+  overscroll-behavior-y: none;
+}
+
+body {
+  font-family: var(--font-body), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes heart-rise {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, -60px) scale(1.6);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
