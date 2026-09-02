@@ -99,7 +99,7 @@ function ClipCard({
 }) {
   return (
     <div
-      className={`w-20 shrink-0 overflow-hidden rounded-xl bg-black shadow-[0_10px_30px_rgba(0,0,0,0.5)] ring-1 ring-rail-strong sm:w-20 ${tilt}`}
+      className={`w-20 shrink-0 overflow-hidden rounded-xl bg-black shadow-[0_10px_30px_rgba(0,0,0,0.5)] ring-1 ring-rail-strong sm:w-24 ${tilt}`}
     >
       <VideoPlayer
         src={src}
