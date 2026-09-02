@@ -61,7 +61,7 @@ function FunHeader() {
 
 function FunScatter() {
   return (
-    <div className="relative mx-auto mt-4 flex w-full max-w-md flex-1 flex-col justify-start gap-6 sm:gap-8">
+    <div className="relative mx-auto mt-2 flex w-full max-w-md flex-1 flex-col justify-start gap-5 sm:gap-6">
       <ItemRow item={ITEMS[0]} align="left" />
       <ItemRow item={ITEMS[1]} align="right" />
       <ItemRow item={ITEMS[2]} align="left" />
@@ -108,7 +108,7 @@ function ItemCard({
   media: FunItem["media"];
   tilt: string;
 }) {
-  const frame = `w-24 shrink-0 overflow-hidden rounded-xl bg-black shadow-[0_10px_30px_rgba(0,0,0,0.5)] ring-1 ring-rail-strong sm:w-28 ${tilt}`;
+  const frame = `w-20 shrink-0 overflow-hidden rounded-xl bg-black shadow-[0_10px_30px_rgba(0,0,0,0.5)] ring-1 ring-rail-strong sm:w-24 ${tilt}`;
 
   if (media === "spotify") {
     return (
@@ -143,7 +143,7 @@ function ItemCard({
         alt="Songwriting"
         placeholder="blur"
         className="aspect-[9/16] h-full w-full object-cover"
-        sizes="(min-width: 640px) 112px, 96px"
+        sizes="(min-width: 640px) 96px, 80px"
       />
     </div>
   );
