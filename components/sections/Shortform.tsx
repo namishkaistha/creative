@@ -119,7 +119,7 @@ function ShortformSocials() {
           old travel vlogs
         </p>
         <a
-          href="https://tiktok.com/@namishkaistha"
+          href="https://instagram.com/namishkaistha"
           target="_blank"
           rel="noopener noreferrer"
           className="text-ink underline decoration-rail-strong underline-offset-4 hover:decoration-accent"
