@@ -1,3 +1,5 @@
+"use client";
+
 import { VideoPlayer } from "../VideoPlayer";
 import { useMediaModal } from "../MediaModal";
 

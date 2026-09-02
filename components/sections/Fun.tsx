@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { VideoPlayer } from "../VideoPlayer";
 import { useMediaModal } from "../MediaModal";
