@@ -147,7 +147,7 @@ function GuestCard({
 }) {
   return (
     <figure
-      className={`flex w-20 shrink-0 flex-col gap-1 sm:w-24 ${tilt}`}
+      className={`flex w-20 shrink-0 flex-col gap-1 sm:w-20 ${tilt}`}
     >
       <div className="overflow-hidden rounded-xl bg-black shadow-[0_10px_30px_rgba(0,0,0,0.5)] ring-1 ring-rail-strong">
         <VideoPlayer
