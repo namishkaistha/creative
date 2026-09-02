@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { VideoPlayer } from "../VideoPlayer";
+import { useMediaModal } from "../MediaModal";
 import songwritingPhoto from "@/assets/songwriting.jpg";
 
 const SECTION_ID = "fun";
@@ -108,7 +109,9 @@ function ItemCard({
   media: FunItem["media"];
   tilt: string;
 }) {
-  const frame = `w-20 shrink-0 overflow-hidden rounded-xl bg-black shadow-[0_10px_30px_rgba(0,0,0,0.5)] ring-1 ring-rail-strong sm:w-24 ${tilt}`;
+  const { open } = useMediaModal();
+  const staticFrame = `w-20 shrink-0 overflow-hidden rounded-xl bg-black shadow-[0_10px_30px_rgba(0,0,0,0.5)] ring-1 ring-rail-strong sm:w-24 ${tilt}`;
+  const interactiveFrame = `${staticFrame} cursor-pointer transition-transform duration-200 hover:scale-105 hover:ring-accent`;
 
   if (media === "spotify") {
     return (
@@ -116,7 +119,7 @@ function ItemCard({
         href={SPOTIFY_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className={frame}
+        className={interactiveFrame}
       >
         <SpotifyTile />
       </a>
@@ -125,27 +128,45 @@ function ItemCard({
 
   if (media === "dj") {
     return (
-      <div className={frame}>
+      <button
+        type="button"
+        onClick={() =>
+          open({ type: "video", src: "/videos/dj.web.mp4", poster: "/videos/dj.jpg" })
+        }
+        aria-label="Open DJ clip full-screen"
+        className={interactiveFrame}
+      >
         <VideoPlayer
           src="/videos/dj.web.mp4"
           poster="/videos/dj.jpg"
           sectionId={SECTION_ID}
-          className="aspect-[9/16] h-full w-full object-cover"
+          className="pointer-events-none aspect-[9/16] h-full w-full object-cover"
         />
-      </div>
+      </button>
     );
   }
 
   return (
-    <div className={frame}>
+    <button
+      type="button"
+      onClick={() =>
+        open({
+          type: "image",
+          src: songwritingPhoto.src,
+          alt: "Songwriting",
+        })
+      }
+      aria-label="Open songwriting photo full-screen"
+      className={interactiveFrame}
+    >
       <Image
         src={songwritingPhoto}
         alt="Songwriting"
         placeholder="blur"
-        className="aspect-[9/16] h-full w-full object-cover"
+        className="pointer-events-none aspect-[9/16] h-full w-full object-cover"
         sizes="(min-width: 640px) 96px, 80px"
       />
-    </div>
+    </button>
   );
 }
 

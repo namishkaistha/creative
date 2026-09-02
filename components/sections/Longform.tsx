@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { VideoPlayer } from "../VideoPlayer";
+import { useMediaModal } from "../MediaModal";
 import alchemyCover from "@/assets/project-alchemy.png";
 
 const SECTION_ID = "longform";
@@ -145,18 +146,22 @@ function GuestCard({
   tilt: string;
   name: string;
 }) {
+  const { open } = useMediaModal();
   return (
-    <figure
-      className={`flex w-20 shrink-0 flex-col gap-1 sm:w-24 ${tilt}`}
-    >
-      <div className="overflow-hidden rounded-xl bg-black shadow-[0_10px_30px_rgba(0,0,0,0.5)] ring-1 ring-rail-strong">
+    <figure className={`flex w-20 shrink-0 flex-col gap-1 sm:w-24 ${tilt}`}>
+      <button
+        type="button"
+        onClick={() => open({ type: "video", src, poster })}
+        aria-label={`Open ${name} clip full-screen`}
+        className="cursor-pointer overflow-hidden rounded-xl bg-black shadow-[0_10px_30px_rgba(0,0,0,0.5)] ring-1 ring-rail-strong transition-transform duration-200 hover:scale-105 hover:ring-accent"
+      >
         <VideoPlayer
           src={src}
           poster={poster}
           sectionId={SECTION_ID}
-          className="aspect-[9/16] h-full w-full object-cover"
+          className="pointer-events-none aspect-[9/16] h-full w-full object-cover"
         />
-      </div>
+      </button>
       <figcaption className="text-center font-mono text-[9px] tracking-widest text-ink-mute uppercase">
         the guest · {name.split(" ")[0].toLowerCase()}
       </figcaption>

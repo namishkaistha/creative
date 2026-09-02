@@ -26,7 +26,8 @@ export function Intro() {
           </Link>{" "}
           is boring and corporate, so I vibecoded this to show off my creative
           endeavors. All the words are me though, not ai. Feel free to drop a
-          like on the pages you think are cool!
+          like on the pages you think are cool, and click on any videos to see
+          them full-screen.
         </p>
       </div>
       <SwipeCue />

@@ -1,4 +1,5 @@
 import { VideoPlayer } from "../VideoPlayer";
+import { useMediaModal } from "../MediaModal";
 
 const SECTION_ID = "shortform";
 
@@ -97,17 +98,21 @@ function ClipCard({
   poster: string;
   tilt: string;
 }) {
+  const { open } = useMediaModal();
   return (
-    <div
-      className={`w-20 shrink-0 overflow-hidden rounded-xl bg-black shadow-[0_10px_30px_rgba(0,0,0,0.5)] ring-1 ring-rail-strong sm:w-24 ${tilt}`}
+    <button
+      type="button"
+      onClick={() => open({ type: "video", src, poster })}
+      aria-label="Open video full-screen"
+      className={`group w-20 shrink-0 cursor-pointer overflow-hidden rounded-xl bg-black shadow-[0_10px_30px_rgba(0,0,0,0.5)] ring-1 ring-rail-strong transition-transform duration-200 hover:scale-105 hover:ring-accent sm:w-24 ${tilt}`}
     >
       <VideoPlayer
         src={src}
         poster={poster}
         sectionId={SECTION_ID}
-        className="aspect-[9/16] h-full w-full object-cover"
+        className="pointer-events-none aspect-[9/16] h-full w-full object-cover"
       />
-    </div>
+    </button>
   );
 }
 

@@ -1,6 +1,7 @@
 import { SnapContainer } from "@/components/SnapContainer";
 import { Section } from "@/components/Section";
 import { SectionRail } from "@/components/SectionRail";
+import { MediaModalProvider } from "@/components/MediaModal";
 import { Intro } from "@/components/sections/Intro";
 import { Shortform } from "@/components/sections/Shortform";
 import { Longform } from "@/components/sections/Longform";
@@ -19,19 +20,21 @@ const SECTIONS = [
 
 export default function Home() {
   return (
-    <SnapContainer>
-      {SECTIONS.map((section, index) => (
-        <Section
-          key={section.id}
-          id={section.id}
-          number={index + 1}
-          total={SECTIONS.length}
-          label={section.label}
-        >
-          {section.node}
-        </Section>
-      ))}
-      <SectionRail pips={SECTIONS} />
-    </SnapContainer>
+    <MediaModalProvider>
+      <SnapContainer>
+        {SECTIONS.map((section, index) => (
+          <Section
+            key={section.id}
+            id={section.id}
+            number={index + 1}
+            total={SECTIONS.length}
+            label={section.label}
+          >
+            {section.node}
+          </Section>
+        ))}
+        <SectionRail pips={SECTIONS} />
+      </SnapContainer>
+    </MediaModalProvider>
   );
 }
