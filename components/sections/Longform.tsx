@@ -88,7 +88,7 @@ function LongformHeader() {
 
 function GuestScatter() {
   return (
-    <div className="relative mx-auto mt-4 flex w-full max-w-md flex-1 flex-col justify-start gap-6 sm:gap-8">
+    <div className="relative mx-auto mt-2 flex w-full max-w-md flex-1 flex-col justify-start gap-5 sm:gap-6">
       <GuestRow guest={GUESTS[0]} align="left" />
       <GuestRow guest={GUESTS[1]} align="right" />
       <GuestRow guest={GUESTS[2]} align="left" />
@@ -147,7 +147,7 @@ function GuestCard({
 }) {
   return (
     <figure
-      className={`flex w-24 shrink-0 flex-col gap-1 sm:w-28 ${tilt}`}
+      className={`flex w-20 shrink-0 flex-col gap-1 sm:w-24 ${tilt}`}
     >
       <div className="overflow-hidden rounded-xl bg-black shadow-[0_10px_30px_rgba(0,0,0,0.5)] ring-1 ring-rail-strong">
         <VideoPlayer
