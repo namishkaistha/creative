@@ -108,7 +108,7 @@ function ItemCard({
   media: FunItem["media"];
   tilt: string;
 }) {
-  const frame = `w-20 shrink-0 overflow-hidden rounded-xl bg-black shadow-[0_10px_30px_rgba(0,0,0,0.5)] ring-1 ring-rail-strong sm:w-24 ${tilt}`;
+  const frame = `w-20 shrink-0 overflow-hidden rounded-xl bg-black shadow-[0_10px_30px_rgba(0,0,0,0.5)] ring-1 ring-rail-strong sm:w-20 ${tilt}`;
 
   if (media === "spotify") {
     return (
@@ -143,7 +143,7 @@ function ItemCard({
         alt="Songwriting"
         placeholder="blur"
         className="aspect-[9/16] h-full w-full object-cover"
-        sizes="(min-width: 640px) 96px, 80px"
+        sizes="80px"
       />
     </div>
   );
