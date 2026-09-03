@@ -62,7 +62,7 @@ function ShortformHeader() {
 
 function ClipScatter() {
   return (
-    <div className="relative mx-auto mt-2 flex w-full max-w-md flex-1 flex-col justify-start gap-5 sm:gap-6">
+    <div className="relative mx-auto mt-2 flex min-h-0 w-full max-w-md flex-1 flex-col justify-start gap-5 overflow-y-auto pb-2 sm:gap-6">
       <ClipRow clip={CLIPS[0]} align="left" />
       <ClipRow clip={CLIPS[1]} align="right" />
       <ClipRow clip={CLIPS[2]} align="left" />

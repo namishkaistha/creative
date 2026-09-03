@@ -20,9 +20,9 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Namish for Deepa",
+  title: "Namish Kaistha — creative",
   description:
-    "A swipe-through pitch from Namish Kaistha — shortform, longform, writing, and the fun stuff.",
+    "A swipe-through of Namish Kaistha's creative work — shortform, longform, writing, and the fun stuff.",
 };
 
 export const viewport = {
