@@ -91,7 +91,7 @@ function LongformHeader() {
 
 function GuestScatter() {
   return (
-    <div className="relative mx-auto mt-2 flex w-full max-w-md flex-1 flex-col justify-start gap-5 sm:gap-6">
+    <div className="relative mx-auto mt-2 flex min-h-0 w-full max-w-md flex-1 flex-col justify-start gap-5 overflow-y-auto pb-2 sm:gap-6">
       <GuestRow guest={GUESTS[0]} align="left" />
       <GuestRow guest={GUESTS[1]} align="right" />
       <GuestRow guest={GUESTS[2]} align="left" />

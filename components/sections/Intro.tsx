@@ -10,9 +10,7 @@ export function Intro() {
       <PortraitFrame />
       <div className="flex max-w-md flex-col items-center gap-5 text-center">
         <h1 className="font-display text-4xl leading-[1.05] font-bold tracking-tight text-ink sm:text-5xl">
-          Hi Deepa,
-          <br />
-          I&rsquo;m Namish <span aria-hidden>👋</span>
+          Hi, I&rsquo;m Namish <span aria-hidden>👋</span>
         </h1>
         <p className="max-w-sm text-[15px] leading-relaxed text-ink-dim">
           My{" "}
