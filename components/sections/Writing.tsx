@@ -1,12 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import happinessCover from "@/assets/happiness-thesis.png";
+import substackCover from "@/assets/on-feeling-alive.png";
 
 const SUBSTACK_URL =
-  "https://namishkaistha.substack.com/p/my-happiness-thesis?r=3uik5y&utm_campaign=post&utm_medium=web";
-const ESSAY_TITLE = "My Happiness Thesis";
+  "https://namishkaistha.substack.com/?utm_campaign=profile_chips";
 const ESSAY_EXCERPT =
-  "A year ago I was not in a great spot, and now I'm pretty happy. I wrote this substack as a reflection to myself on how I slowly changed my mindset and lifestyle to be a ball of abundance and joy.";
+  "My musings on tech that's interesting to me, and insights on being early 20s.";
 
 export function Writing() {
   return (
@@ -17,17 +16,14 @@ export function Writing() {
       <div className="flex flex-1 flex-col items-center justify-center gap-5 sm:gap-6">
         <div className="w-40 overflow-hidden rounded-xl ring-1 ring-rail sm:w-48">
           <Image
-            src={happinessCover}
-            alt="My Happiness Thesis cover"
+            src={substackCover}
+            alt="Substack cover"
             placeholder="blur"
             className="h-auto w-full"
             sizes="(min-width: 640px) 192px, 160px"
           />
         </div>
         <div className="flex max-w-lg flex-col items-center gap-3 text-center">
-          <h3 className="font-display text-3xl leading-[1.1] font-bold tracking-tight text-ink sm:text-4xl">
-            {ESSAY_TITLE}
-          </h3>
           <p className="text-[14px] leading-relaxed text-ink-dim">
             {ESSAY_EXCERPT}
           </p>
