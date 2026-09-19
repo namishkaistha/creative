@@ -4,6 +4,7 @@ import substackCover from "@/assets/on-feeling-alive.png";
 
 const SUBSTACK_URL =
   "https://namishkaistha.substack.com/?utm_campaign=profile_chips";
+const ESSAY_TITLE = "Answering my own questions";
 const ESSAY_EXCERPT =
   "My musings on tech that's interesting to me, and insights on being early 20s.";
 
@@ -14,16 +15,19 @@ export function Writing() {
         substack.
       </h2>
       <div className="flex flex-1 flex-col items-center justify-center gap-5 sm:gap-6">
-        <div className="w-40 overflow-hidden rounded-xl ring-1 ring-rail sm:w-48">
+        <div className="w-56 overflow-hidden rounded-xl ring-1 ring-rail sm:w-72">
           <Image
             src={substackCover}
             alt="Substack cover"
             placeholder="blur"
             className="h-auto w-full"
-            sizes="(min-width: 640px) 192px, 160px"
+            sizes="(min-width: 640px) 288px, 224px"
           />
         </div>
         <div className="flex max-w-lg flex-col items-center gap-3 text-center">
+          <h3 className="font-display text-2xl leading-[1.15] font-bold tracking-tight text-ink sm:text-3xl">
+            {ESSAY_TITLE}
+          </h3>
           <p className="text-[14px] leading-relaxed text-ink-dim">
             {ESSAY_EXCERPT}
           </p>
