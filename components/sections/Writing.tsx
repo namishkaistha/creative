@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import substackCover from "@/assets/on-feeling-alive.png";
+import substackCover from "@/assets/happiness-thesis.png";
 
 const SUBSTACK_URL =
   "https://namishkaistha.substack.com/?utm_campaign=profile_chips";
@@ -18,7 +18,7 @@ export function Writing() {
         <div className="w-56 overflow-hidden rounded-xl ring-1 ring-rail sm:w-72">
           <Image
             src={substackCover}
-            alt="Substack cover"
+            alt="Happiness thesis"
             placeholder="blur"
             className="h-auto w-full"
             sizes="(min-width: 640px) 288px, 224px"
