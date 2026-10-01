@@ -1,7 +1,9 @@
-import { HeartButton } from "./HeartButton";
+import { Suspense } from "react";
+import type { SectionId } from "@/lib/sections";
+import { SectionLike } from "./SectionLike";
 
 type Props = {
-  id: string;
+  id: SectionId;
   number: number;
   total: number;
   label: string;
@@ -18,7 +20,11 @@ export function Section({ id, number, total, label, children }: Props) {
     >
       {children}
       <SectionCorner number={number} total={total} label={label} />
-      <HeartButton sectionId={id} />
+      <div className="absolute top-4 right-4 z-10">
+        <Suspense fallback={null}>
+          <SectionLike sectionId={id} />
+        </Suspense>
+      </div>
     </section>
   );
 }

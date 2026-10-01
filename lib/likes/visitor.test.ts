@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { hashVisitor, visitorIpFrom } from "./visitor.ts";
+import { hashVisitor, visitorIpFrom } from "./visitor";
 
 test("prefers x-real-ip", () => {
   const headers = new Headers({ "x-real-ip": "1.1.1.1", "x-forwarded-for": "2.2.2.2" });

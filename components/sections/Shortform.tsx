@@ -1,9 +1,10 @@
 "use client";
 
+import type { SectionId } from "@/lib/sections";
 import { VideoPlayer } from "../VideoPlayer";
 import { useMediaModal } from "../MediaModal";
 
-const SECTION_ID = "shortform";
+const SECTION_ID: SectionId = "shortform";
 
 const CLIPS = [
   {

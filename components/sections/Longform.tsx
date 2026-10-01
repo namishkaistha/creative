@@ -2,11 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import type { SectionId } from "@/lib/sections";
 import { VideoPlayer } from "../VideoPlayer";
 import { useMediaModal } from "../MediaModal";
 import alchemyCover from "@/assets/project-alchemy.png";
 
-const SECTION_ID = "longform";
+const SECTION_ID: SectionId = "longform";
 
 const PODCAST_URL =
   "http://open.spotify.com/show/4JDEKnaNhWAL0ceZmZ7dsx?si=NLuzfMvCSdmBXYYxeD0PxQ";
