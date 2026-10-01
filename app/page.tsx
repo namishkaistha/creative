@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+import { SECTIONS, type SectionId } from "@/lib/sections";
 import { SnapContainer } from "@/components/SnapContainer";
 import { Section } from "@/components/Section";
 import { SectionRail } from "@/components/SectionRail";
@@ -8,13 +10,13 @@ import { Longform } from "@/components/sections/Longform";
 import { Writing } from "@/components/sections/Writing";
 import { Fun } from "@/components/sections/Fun";
 
-const SECTIONS = [
-  { id: "hi", label: "Hi", node: <Intro /> },
-  { id: "shortform", label: "Shortform", node: <Shortform /> },
-  { id: "longform", label: "Longform", node: <Longform /> },
-  { id: "writing", label: "Writing", node: <Writing /> },
-  { id: "fun", label: "For fun", node: <Fun /> },
-] as const;
+const SECTION_CONTENT: Record<SectionId, ReactNode> = {
+  hi: <Intro />,
+  shortform: <Shortform />,
+  longform: <Longform />,
+  writing: <Writing />,
+  fun: <Fun />,
+};
 
 export default function Home() {
   return (
@@ -28,7 +30,7 @@ export default function Home() {
             total={SECTIONS.length}
             label={section.label}
           >
-            {section.node}
+            {SECTION_CONTENT[section.id]}
           </Section>
         ))}
         <SectionRail pips={SECTIONS} />

@@ -1,12 +1,13 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import type { SectionId } from "@/lib/sections";
 import { useActiveSection } from "./active-section-context";
 
 type Props = {
   src: string;
   poster?: string;
-  sectionId: string;
+  sectionId: SectionId;
   className?: string;
 };
 

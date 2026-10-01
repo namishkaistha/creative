@@ -1,11 +1,12 @@
 "use client";
 
 import Image from "next/image";
+import type { SectionId } from "@/lib/sections";
 import { VideoPlayer } from "../VideoPlayer";
 import { useMediaModal } from "../MediaModal";
 import songwritingPhoto from "@/assets/songwriting.jpg";
 
-const SECTION_ID = "fun";
+const SECTION_ID: SectionId = "fun";
 
 const SPOTIFY_URL =
   "https://open.spotify.com/user/namishkaistha?si=b64903c296d542d9";
