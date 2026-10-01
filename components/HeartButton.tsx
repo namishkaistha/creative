@@ -1,49 +1,36 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
+import { useEffect, useState } from "react";
+import type { LikesSummary } from "@/lib/likes/handlers.ts";
+import { loadLikesSummary, saveLike } from "@/lib/likes/client.ts";
 import { LikeBurst } from "./interior/like-burst";
 
-const STORAGE_PREFIX = "hearts:";
-
 export function HeartButton({ sectionId }: { sectionId: string }) {
-  const initialLiked = useSyncExternalStore(
-    noopSubscribe,
-    () => (parseInt(readStored(sectionId) ?? "", 10) || 0) > 0,
-    () => null,
-  );
+  const [summary, setSummary] = useState<LikesSummary | null>(null);
+
+  useEffect(() => {
+    let isMounted = true;
+    loadLikesSummary().then(
+      (loaded) => isMounted && setSummary(loaded),
+      // Showing no button beats showing a count we know is wrong.
+      () => {},
+    );
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   return (
     <div className="absolute top-4 right-4 z-10">
-      {initialLiked !== null && (
+      {summary && (
         <LikeBurst
-          initialLiked={initialLiked}
-          initialCount={initialLiked ? 1 : 0}
+          initialLiked={summary.liked.includes(sectionId)}
+          initialCount={summary.counts[sectionId] ?? 0}
           label="Like"
           activeLabel="Liked"
-          onToggle={(liked) => writeStored(sectionId, liked)}
+          onCommit={(liked, signal) => saveLike({ sectionId, liked, signal })}
         />
       )}
     </div>
   );
-}
-
-// LikeBurst owns the liked state after mount, so storage is only read once.
-function noopSubscribe() {
-  return () => {};
-}
-
-function readStored(sectionId: string) {
-  try {
-    return window.localStorage.getItem(STORAGE_PREFIX + sectionId);
-  } catch {
-    return null;
-  }
-}
-
-function writeStored(sectionId: string, liked: boolean) {
-  try {
-    window.localStorage.setItem(STORAGE_PREFIX + sectionId, liked ? "1" : "0");
-  } catch {
-    // Storage unavailable (private mode); the like still shows for this visit.
-  }
 }

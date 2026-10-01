@@ -6,9 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "node --test lib/"
   },
   "dependencies": {
+    "@neondatabase/serverless": "1.1.0",
     "motion": "^13.4.6",
     "next": "16.3.4",
     "react": "19.2.8",
