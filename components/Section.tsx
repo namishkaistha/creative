@@ -20,7 +20,7 @@ export function Section({ id, number, total, label, children }: Props) {
     >
       {children}
       <SectionCorner number={number} total={total} label={label} />
-      <div className="absolute top-4 right-4 z-10">
+      <div className="absolute right-3 bottom-8 z-10 sm:right-14 sm:bottom-12">
         <Suspense fallback={null}>
           <SectionLike sectionId={id} />
         </Suspense>
