@@ -30,7 +30,7 @@ export function SnapContainer({ children }: { children: React.ReactNode }) {
     <ActiveSectionContext.Provider value={active}>
       <div
         ref={scrollRef}
-        className="h-[100dvh] w-screen overflow-y-scroll snap-y snap-mandatory bg-bg"
+        className="h-[100dvh] w-full overflow-x-hidden overflow-y-scroll snap-y snap-mandatory bg-bg"
       >
         {children}
       </div>

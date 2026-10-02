@@ -9,6 +9,7 @@ import { Shortform } from "@/components/sections/Shortform";
 import { Longform } from "@/components/sections/Longform";
 import { Writing } from "@/components/sections/Writing";
 import { Fun } from "@/components/sections/Fun";
+import { Connect } from "@/components/sections/Connect";
 
 const SECTION_CONTENT: Record<SectionId, ReactNode> = {
   hi: <Intro />,
@@ -16,6 +17,7 @@ const SECTION_CONTENT: Record<SectionId, ReactNode> = {
   longform: <Longform />,
   writing: <Writing />,
   fun: <Fun />,
+  connect: <Connect />,
 };
 
 export default function Home() {

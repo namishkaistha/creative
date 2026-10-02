@@ -4,6 +4,7 @@ export const SECTIONS = [
   { id: "longform", label: "Longform" },
   { id: "writing", label: "Writing" },
   { id: "fun", label: "For fun" },
+  { id: "connect", label: "Say hi" },
 ] as const;
 
 export type SectionId = (typeof SECTIONS)[number]["id"];

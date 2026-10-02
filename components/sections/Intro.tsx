@@ -28,7 +28,7 @@ export function Intro() {
           them full-screen.
         </p>
       </div>
-      <SwipeCue />
+      <ScrollCue />
     </div>
   );
 }
@@ -48,11 +48,11 @@ function PortraitFrame() {
   );
 }
 
-function SwipeCue() {
+function ScrollCue() {
   return (
     <div className="flex flex-col items-center gap-2 text-ink-mute">
       <span className="font-mono text-[10px] tracking-[0.2em] uppercase">
-        swipe
+        scroll
       </span>
       <span
         aria-hidden
