@@ -22,7 +22,7 @@ const mono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Namish Kaistha — creative",
   description:
-    "A swipe-through of Namish Kaistha's creative work — shortform, longform, writing, and the fun stuff.",
+    "A scroll-through of Namish Kaistha's creative work — shortform, longform, writing, and the fun stuff.",
 };
 
 export const viewport = {

@@ -17,7 +17,7 @@ export function Section({ id, number, total, label, children }: Props) {
       id={id}
       data-section={id}
       aria-label={label}
-      className="relative h-[100dvh] w-screen touch-manipulation snap-start snap-always overflow-hidden"
+      className="relative h-[100dvh] w-full touch-manipulation snap-start snap-always overflow-hidden"
     >
       <DoubleTapToLike>
         {children}

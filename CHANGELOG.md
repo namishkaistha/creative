@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-10-02
+
+### Added
+- "Say hi" section at the end of the page with email, LinkedIn, GitHub, Instagram, TikTok and Substack links.
+
+### Changed
+- The intro cue reads "scroll" instead of "swipe", and the site description now says "scroll-through".
+
+### Fixed
+- The page no longer gets a sideways scrollbar. The scroller and sections were sized to the full window width (`w-screen`), which includes the vertical scrollbar, so they overflowed horizontally. They now fill their container and clip horizontal overflow.
+
 ## 2026-09-30
 
 ### Added
