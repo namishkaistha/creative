@@ -6,6 +6,7 @@
 - "Say hi" section at the end of the page with circular icon links to Substack, TikTok, Instagram, LinkedIn and email.
 
 ### Changed
+- The Instagram icon in "Say hi" links to @nam_yaps, alongside TikTok @namyaps.
 - The intro cue reads "scroll" instead of "swipe", and the site description now says "scroll-through".
 
 ### Fixed
