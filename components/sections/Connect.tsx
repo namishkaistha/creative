@@ -38,7 +38,7 @@ const LINKS: readonly ContactLink[] = [
   },
   {
     label: "Instagram",
-    href: "https://instagram.com/namishkaistha",
+    href: "https://instagram.com/nam_yaps",
     tint: "#d8579a",
     isExternal: true,
     icon: (
