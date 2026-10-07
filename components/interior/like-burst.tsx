@@ -229,16 +229,16 @@ export function LikeBurst({
           onToggle?.(!liked);
         }}
         style={{ touchAction: "manipulation" }}
-        className="inline-flex h-9 select-none items-center gap-2 rounded-[9px] border border-stone-200 bg-white px-3 text-[13px] font-medium text-stone-700 outline-none focus-visible:ring-2 focus-visible:ring-stone-400 disabled:opacity-50 dark:border-white/[0.16] dark:bg-[#1D1D1A] dark:text-stone-200 dark:focus-visible:ring-stone-500"
+        className="inline-flex h-9 select-none items-center gap-2 rounded-[9px] border border-stone-200 bg-white px-3 text-[0.8125rem] font-medium text-stone-700 outline-none focus-visible:ring-2 focus-visible:ring-stone-400 disabled:opacity-50 dark:border-white/[0.16] dark:bg-[#1D1D1A] dark:text-stone-200 dark:focus-visible:ring-stone-500"
       >
-        <span aria-hidden className="relative block size-[18px]">
+        <span aria-hidden className="relative block size-[1.125rem]">
           <motion.svg
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
             strokeWidth={1.7}
             strokeLinejoin="round"
-            className="absolute inset-0 size-[18px] text-stone-500 dark:text-stone-400"
+            className="absolute inset-0 size-[1.125rem] text-stone-500 dark:text-stone-400"
             initial={false}
             animate={{ opacity: liked ? 0 : 1 }}
             transition={reduced ? INSTANT : CROSSFADE}
@@ -249,7 +249,7 @@ export function LikeBurst({
           <motion.svg
             viewBox="0 0 24 24"
             fill="currentColor"
-            className="absolute inset-0 size-[18px] text-stone-800 dark:text-stone-100"
+            className="absolute inset-0 size-[1.125rem] text-stone-800 dark:text-stone-100"
             initial={false}
             animate={{ opacity: liked ? 1 : 0, scale: liked ? 1 : 0.55 }}
             transition={reduced ? INSTANT : CELL}
@@ -302,7 +302,7 @@ export function LikeBurst({
 
         <span
           aria-hidden
-          className="grid overflow-hidden text-[12px] tabular-nums text-stone-500 dark:text-stone-400"
+          className="grid overflow-hidden text-[0.75rem] tabular-nums text-stone-500 dark:text-stone-400"
         >
           <span className="invisible col-start-1 row-start-1">{widest}</span>
           <AnimatePresence initial={false}>

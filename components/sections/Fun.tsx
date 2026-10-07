@@ -56,7 +56,7 @@ function FunHeader() {
       <h2 className="font-display text-4xl leading-none font-bold tracking-tight text-ink sm:text-5xl">
         how I&rsquo;m creative for fun.
       </h2>
-      <p className="font-mono text-[11px] tracking-widest text-ink-mute uppercase">
+      <p className="font-mono text-[0.6875rem] tracking-widest text-ink-mute uppercase">
         music!
       </p>
     </div>
@@ -86,7 +86,7 @@ function ItemRow({
     <div className={`flex items-center gap-4 ${flip}`}>
       <ItemCard media={item.media} tilt={item.tilt} />
       <p
-        className={`flex-1 font-mono text-[12px] leading-snug text-ink-dim ${textAlign}`}
+        className={`flex-1 font-mono text-[0.75rem] leading-snug text-ink-dim ${textAlign}`}
       >
         {item.href ? (
           <a
@@ -177,7 +177,7 @@ function SpotifyTile() {
   return (
     <div className="flex aspect-[9/16] h-full w-full flex-col items-center justify-center gap-2 bg-[#1DB954] text-black">
       <SpotifyMark />
-      <span className="font-mono text-[9px] tracking-widest uppercase">
+      <span className="font-mono text-[0.5625rem] tracking-widest uppercase">
         spotify
       </span>
     </div>

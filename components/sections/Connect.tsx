@@ -96,7 +96,7 @@ function ConnectHeader() {
       <h2 className="font-display text-4xl leading-none font-bold tracking-tight text-ink sm:text-5xl">
         say hi.
       </h2>
-      <p className="text-[13px] leading-relaxed text-ink-dim sm:text-sm">
+      <p className="text-[0.8125rem] leading-relaxed text-ink-dim sm:text-sm">
         I&rsquo;m always up to talk about stories, content, building things, or
         music. Pick whichever is easiest for you.
       </p>
@@ -133,7 +133,7 @@ function ContactIcon({ link }: { link: ContactLink }) {
             {link.icon}
           </svg>
         </span>
-        <span className="font-mono text-[10px] tracking-widest text-ink-mute uppercase">
+        <span className="font-mono text-[0.625rem] tracking-widest text-ink-mute uppercase">
           {link.label}
         </span>
       </a>

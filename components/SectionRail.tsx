@@ -43,7 +43,7 @@ function RailPip({
         className="group flex items-center gap-2"
       >
         <span
-          className={`font-mono text-[10px] tabular-nums transition-colors ${
+          className={`font-mono text-[0.625rem] tabular-nums transition-colors ${
             isActive ? "text-ink" : "text-ink-mute group-hover:text-ink-dim"
           }`}
         >

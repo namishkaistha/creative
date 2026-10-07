@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-07
+
+### Fixed
+- The site now adapts to the laptop it's on. Every page is one screen tall, so on screens 1024px and wider the base text size follows the window (16px at 1440x900, smaller on short screens, up to 24px on big ones) and the whole layout scales with it. On 1280x720 and 1366x768 the third shortform clip and the third podcast guest were cut off at the bottom; on 1920x1080 and larger everything sat small in a mostly empty page. The fixed pixel text sizes were converted to rem so they scale too. Phones are unchanged.
+
 ## 2026-10-02
 
 ### Added

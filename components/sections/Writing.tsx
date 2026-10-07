@@ -28,7 +28,7 @@ export function Writing() {
           <h3 className="font-display text-2xl leading-[1.15] font-bold tracking-tight text-ink sm:text-3xl">
             {ESSAY_TITLE}
           </h3>
-          <p className="text-[14px] leading-relaxed text-ink-dim">
+          <p className="text-[0.875rem] leading-relaxed text-ink-dim">
             {ESSAY_EXCERPT}
           </p>
         </div>
@@ -36,7 +36,7 @@ export function Writing() {
           href={SUBSTACK_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-full bg-accent px-6 py-3 font-mono text-[12px] tracking-widest text-ink uppercase transition-transform hover:scale-[1.02]"
+          className="rounded-full bg-accent px-6 py-3 font-mono text-[0.75rem] tracking-widest text-ink uppercase transition-transform hover:scale-[1.02]"
         >
           Read on Substack →
         </Link>

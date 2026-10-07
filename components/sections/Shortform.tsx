@@ -50,7 +50,7 @@ function ShortformHeader() {
       <h2 className="font-display text-4xl leading-none font-bold tracking-tight text-ink sm:text-5xl">
         shortform.
       </h2>
-      <p className="text-[13px] leading-relaxed text-ink-dim sm:text-sm">
+      <p className="text-[0.8125rem] leading-relaxed text-ink-dim sm:text-sm">
         I started making shortform content in looking for new creative avenues
         after my podcast, and thought it would be fun to start vlogging my
         travels post-grad. It turned into{" "}
@@ -84,7 +84,7 @@ function ClipRow({
     <div className={`flex items-center gap-4 ${flip}`}>
       <ClipCard src={clip.src} poster={clip.poster} tilt={clip.tilt} />
       <p
-        className={`flex-1 font-mono text-[12px] leading-snug text-ink-dim ${textAlign}`}
+        className={`flex-1 font-mono text-[0.75rem] leading-snug text-ink-dim ${textAlign}`}
       >
         {clip.caption}
       </p>
@@ -121,7 +121,7 @@ function ClipCard({
 
 function ShortformSocials() {
   return (
-    <aside className="absolute right-4 bottom-32 z-[5] flex max-w-[8rem] flex-col gap-2 text-right font-mono text-[10px] leading-snug text-ink-dim sm:right-16 sm:bottom-36 sm:max-w-[10rem] sm:text-[11px]">
+    <aside className="absolute right-4 bottom-32 z-[5] flex max-w-[8rem] flex-col gap-2 text-right font-mono text-[0.625rem] leading-snug text-ink-dim sm:right-16 sm:bottom-36 sm:max-w-[10rem] sm:text-[0.6875rem]">
       <div>
         <p className="tracking-widest text-ink-mute uppercase">
           old travel vlogs
@@ -161,10 +161,10 @@ function ShortformSocials() {
 function InterestingNotes() {
   return (
     <aside className="absolute top-14 right-4 z-[5] max-w-[9.5rem] rounded-xl border border-rail bg-black/60 p-2.5 backdrop-blur-sm sm:top-16 sm:right-16 sm:max-w-[15rem] sm:p-3">
-      <p className="mb-1.5 font-mono text-[9px] tracking-widest text-ink-mute uppercase sm:text-[10px]">
+      <p className="mb-1.5 font-mono text-[0.5625rem] tracking-widest text-ink-mute uppercase sm:text-[0.625rem]">
         some things you might find interesting
       </p>
-      <ul className="flex flex-col gap-1.5 text-[10px] leading-snug text-ink-dim sm:text-[11px]">
+      <ul className="flex flex-col gap-1.5 text-[0.625rem] leading-snug text-ink-dim sm:text-[0.6875rem]">
         {NOTES.map((note, index) => (
           <li key={index} className="flex gap-1.5">
             <span className="text-accent">·</span>

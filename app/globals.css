@@ -35,6 +35,16 @@ body {
   overscroll-behavior-y: none;
 }
 
+/* Each section is exactly one screen tall, so on laptop and desktop screens
+   the base size follows the window: everything sized in rem (nearly the whole
+   layout) grows on big displays and shrinks on short ones so nothing is cut
+   off. Tuned to 16px at 1440x900; phones and tablets keep the default. */
+@media (min-width: 1024px) {
+  html {
+    font-size: clamp(12px, min(1.111vw, 1.75vh), 24px);
+  }
+}
+
 body {
   font-family: var(--font-body), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;

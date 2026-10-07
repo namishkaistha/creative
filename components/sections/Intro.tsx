@@ -12,7 +12,7 @@ export function Intro() {
         <h1 className="font-display text-4xl leading-[1.05] font-bold tracking-tight text-ink sm:text-5xl">
           Hi, I&rsquo;m Namish <span aria-hidden>👋</span>
         </h1>
-        <p className="max-w-sm text-[15px] leading-relaxed text-ink-dim">
+        <p className="max-w-sm text-[0.9375rem] leading-relaxed text-ink-dim">
           My{" "}
           <Link
             href={RESUME_URL}
@@ -51,7 +51,7 @@ function PortraitFrame() {
 function ScrollCue() {
   return (
     <div className="flex flex-col items-center gap-2 text-ink-mute">
-      <span className="font-mono text-[10px] tracking-[0.2em] uppercase">
+      <span className="font-mono text-[0.625rem] tracking-[0.2em] uppercase">
         scroll
       </span>
       <span

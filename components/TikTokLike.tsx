@@ -85,7 +85,7 @@ export function TikTokLike({ initialLiked, initialCount, onCommit }: Props) {
 
         <span
           aria-hidden
-          className="text-[13px] font-semibold tabular-nums [text-shadow:0_1px_3px_rgb(0_0_0/0.6)]"
+          className="text-[0.8125rem] font-semibold tabular-nums [text-shadow:0_1px_3px_rgb(0_0_0/0.6)]"
         >
           {formatCount(count)}
         </span>

@@ -42,7 +42,7 @@ function SectionCorner({
   label: string;
 }) {
   return (
-    <div className="pointer-events-none absolute top-5 left-5 flex items-center gap-2 font-mono text-[11px] tracking-widest text-ink-mute uppercase">
+    <div className="pointer-events-none absolute top-5 left-5 flex items-center gap-2 font-mono text-[0.6875rem] tracking-widest text-ink-mute uppercase">
       <span className="tabular-nums">
         {String(number).padStart(2, "0")} / {String(total).padStart(2, "0")}
       </span>
